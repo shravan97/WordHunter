@@ -39,10 +39,16 @@ def scrape_site(url):
 		soup = bs(page)
 		[s.extract() for s in soup('script')]
 		[s.extract() for s in soup('style')]
+		phrases=[]
 		words=[]
-	
+
 		for k in soup.strings:
-			words.append(re.split('[\n\t]+' , k))
+			phrases.append(re.split('[\n\t ]+' , k))
+
+		for k in phrases:
+			for z in k:
+				if z!='':
+					words.append(z)
 
 		return words
 	except :
