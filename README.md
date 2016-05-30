@@ -1,5 +1,5 @@
 # :newspaper: Word Hunter  
-____  
+  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  *- Automated online Treasure hunt*  
 
 ## Description  
@@ -8,7 +8,7 @@ ___
 
 ## Specifications  
 * OS : All Linux distributions  
-* Core language : python 2.7.x
+* Core language : python 2.7.x  
 ___  
 
 ## Tools used  
@@ -16,13 +16,13 @@ ___
 > Please note that , using the **google custom search API** , you can make only 100 calls per day  
 * [Beautiful Soup 4](https://pypi.python.org/pypi/beautifulsoup4 "Beautiful Soup")  
 * [NLTK python](http://www.nltk.org/ "Natural language tool kit python")  
-* [urllib2 python](https://docs.python.org/2/library/urllib2.html)
+* [urllib2 python](https://docs.python.org/2/library/urllib2.html)  
 ___  
 
 ## Benefits  
 > This can easily be implemented on any python server (To host similar competitions) .  
 > You can also extract out some kind of a suggestion in the form of words , in case you're setting questions for an online treasure hunt competition .  
-___  
+
 
 ## Running the app  
 ``` $ git clone https://github.com/shravan97/WordHunter ```  
