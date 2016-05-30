@@ -18,7 +18,7 @@ class GoogleSearch:
 
 	def get_results(self,search_term):
 		urls=[]
-		print "Querying Google ......"
+		print "Querying ......"
 		for k in range(0,7):
 			res = self.search(search_term , start=k*10+1 , num=10)
 			for z in res:
@@ -34,10 +34,12 @@ class GoogleSearch:
 	def get_words_from_urls(url_list):
 		#Gets all the words from a list of urls
 		words = []
+		print "Scraping and fetching words ......."
 		for k in url_list:
 			scr = GoogleSearch.scrape_site(str(k))
 			if scr!=-1:
-				words.append(scr)
+				for word in scr:
+					words.append(word)
 		
 		return words
 
@@ -47,20 +49,19 @@ class GoogleSearch:
 		hdr = {'User-Agent': 'Mozilla/5.0'}
 		req = urllib2.Request(url , headers=hdr)
 		try:
-			print 'Scraping '+url+' ......'
 			page = urllib2.urlopen(req)
 			soup = bs(page)
-			[s.extract() for s in soup('script')]
-			[s.extract() for s in soup('style')]
+			[s.extract() for s in soup('script')] #remove content from script tags
+			[s.extract() for s in soup('style')] # remove content from style tags
 			phrases=[]
 			words=[]
 	
 			for k in soup.strings:
-				phrases.append(re.split('[\n\t ]+' , k))
+				phrases.append(re.split('[\n\t.,\"\'()!;= ]+' , k))
 	
 			for k in phrases:
 				for z in k:
-					if z!='':
+					if z!='' and re.match(' [0-9]+ ',z)==None:
 						words.append(z)
 	
 			return words
