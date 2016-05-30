@@ -1,46 +1,43 @@
 from nltk.stem.porter import PorterStemmer as ps
-import re , csv
+import re , csv , os
 
-def frequency(words):
-	words=[str.upper(word) for word in words]
-	words = stemmer(words)
+class WordAnalyze:
+	def __init__(self , words_list):
+		self.words = words_list
 
-	return {word:words.count(word) for word in words}
+	def frequency(self):
+		words=[str.upper(word.encode('utf8')) for word in self.words]
 
-def stemmer(words):
-	#Stemming the words using Porter's algorithm
-	stemmer = ps()
-	return [stemmer.stem(word) for word in words]
+		print "calculating frequencies ......"	
+		return {word:words.count(word) for word in words}
 
-def word_diff(words):
-	#This function preserves the ending of each word since it gets destroyed after stemming
-	stmr = ps()
-	word_dict = {stmr.stem(word):[] for word in words}
+	def stemmer(self):
+		#Stems a list of words using Porter's algorithm
+		stmr = ps()
+		return [stmr.stem(word) for word in self.words]
 
-	for word in words:
-		stemmed = stmr.stem(word)
-		st_temp = stmr.stem(word)
-		while word.startswith(st_temp)==False and len(st_temp)!=0:
-			splitted_str = list(st_temp)
-			splitted_str.pop()
-			st_temp = ''.join(splitted_str)
+	# !!--- Don't forget that words like 'very' , 'angrily' ..., are stemmed to 'veri','angrili' ---!!
 
-		word_dict[stemmed].append(re.sub(st_temp , '' , word))
-	print word_dict
+	def words_filter(self , path_to_prepositions):
+		#filter prepositions first
+		file = open(path_to_prepositions+'prepositions.csv' , 'r+')
+	 	#prepositions in file scrapped from https://www.englishclub.com/grammar/prepositions-list.htm
+		rows = csv.reader(file)
+		prepositions=[row[0] for row in rows]
+	 	
+	 	print "Filtering out words ........."
 
-	# !!--- Don't forget to fix words like 'very' , 'angrily' ..., which are stemmed to 'veri','angrili' ---!!
+	 	#As of now , there are about 60 prepositions in the file . You can add more prepositions to the 'prepositions.csv' file
+	 	w = self.words
+	 	w_temp = list(w)
+	 	curr_index=0
 
-def preposition_filter(words):
+	 	for k in w_temp:
+	 		if str.upper(k.encode('utf8')) in prepositions:
+	 			w.pop(curr_index)
+	 			curr_index-=1
+	 		curr_index+=1
+
+	 	# !!-- Add more filters here --!!		
 	
-	file = open('prepositions.csv' , 'r+')
- 	#prepositions in file scrapped from https://www.englishclub.com/grammar/prepositions-list.htm
-	rows = csv.reader(file)
-	prepositions=[row[0] for row in rows]
- 	
- 	#As of now , there are 57 prepositions in the file . You can add more prepositions to the 'prepositions.csv' file
- 	
- 	for k in range(0,len(words)-1):
- 		if str.upper(str(words[k])) in prepositions:
- 			words.pop(k)
-
- 	return words
+	 	return w
