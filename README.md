@@ -17,6 +17,7 @@ ___
 
 > Please note that , using the **google custom search API** , you can make only 100 calls per day   
 
+* [google-api-python-client](https://pypi.python.org/pypi/google-api-python-client/)  
 * [Beautiful Soup 4](https://pypi.python.org/pypi/beautifulsoup4 "Beautiful Soup")  
 * [NLTK python](http://www.nltk.org/ "Natural language tool kit python")  
 * [urllib2 python](https://docs.python.org/2/library/urllib2.html)   
