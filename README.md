@@ -14,7 +14,9 @@ ___
 
 ## Tools used  
 * [Google custom search API](https://developers.google.com/custom-search/ "Search API") (For both images and words)  
-> Please note that , using the **google custom search API** , you can make only 100 calls per day  
+
+> Please note that , using the **google custom search API** , you can make only 100 calls per day   
+
 * [Beautiful Soup 4](https://pypi.python.org/pypi/beautifulsoup4 "Beautiful Soup")  
 * [NLTK python](http://www.nltk.org/ "Natural language tool kit python")  
 * [urllib2 python](https://docs.python.org/2/library/urllib2.html)   
@@ -33,21 +35,22 @@ ___
 ___  
 
 
-##
 ## ToDo  
-[X] Implement a ``` Search Engine ``` to find out words similar to a given word  
-[X] Implement a ``` Word Analyzer ``` modules to find frequencies and to perform other operations on various words  
-[X] Implement an ``` Image Searcher ``` to get images related to the given term  
-[ ] Include a loading bar , when the fetched URLs are being scrapped and when frequency is being calculated  
-[ ] Better way to filter out the massive amount of noise that comes along with search words  
-[ ] Add pictures and gifs of a sample execution  
-[ ] Better word suggester (Both interms of filtering and its frequency)  
-[ ] Search term used for image search needs to be automatically found  
+
+- [x] Implement a ``` Search Engine ``` to find out words similar to a given word  
+- [x] Implement a ``` Word Analyzer ``` modules to find frequencies and to perform other operations on various words  
+- [x] Implement an ``` Image Searcher ``` to get images related to the given term  
+- [ ] Include a loading bar , when the fetched URLs are being scrapped and when frequency is being calculated  
+- [ ] Better way to filter out the massive amount of noise that comes along with search words  
+- [ ] Add pictures and gifs of a sample execution  
+- [ ] Better word suggester (Both interms of filtering and its frequency)  
+- [ ] Search term used for image search needs to be automatically found  
+
 ___  
 
 
 ## Contributing  
-Got any cool idea that could be implemented here ? Go ahead and give a pull request . Or You may as well put it up as an issue [here](https://github.com/shravan97/Word-Hunter/issues "Issues")  
+Got any cool idea that could be implemented here ? Go ahead and give a pull request . Or You may as well put it up as an issue [here](https://github.com/shravan97/WordHunter/issues "Issues")  
 
 [Please don't forget update the contributors' list below when you're giving a pull request :smile: ]
 ___  
