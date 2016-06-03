@@ -47,6 +47,7 @@ ___
 - [ ] Better word suggester (Both interms of filtering and its frequency)  
 - [ ] Search term used for image search needs to be automatically found  
 - [ ] Implement multiprocessing in parts which are slower to run  
+- [ ] Program will have to terminate smoothly on keyboard interrupts and other hindrances  
 
 ___  
 
