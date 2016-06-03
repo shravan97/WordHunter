@@ -16,6 +16,22 @@ class WordAnalyze:
 		stmr = ps()
 		return [stmr.stem(word) for word in self.words]
 
+	def word_diff(self):
+		#This function preserves the ending of each word since it gets destroyed after stemming
+		stmr = ps()
+		word_dict = {stmr.stem(word):[] for word in self.words}
+
+		for word in self.words:
+			stemmed = stmr.stem(word)
+			st_temp = stmr.stem(word)
+			while word.startswith(st_temp)==False and len(st_temp)!=0:
+				splitted_str = list(st_temp)
+				splitted_str.pop()
+				st_temp = ''.join(splitted_str)
+
+			word_dict[stemmed].append(re.sub(st_temp , '' , word))
+		return word_dict	
+
 	# !!--- Don't forget that words like 'very' , 'angrily' ..., are stemmed to 'veri','angrili' ---!!
 
 	def words_filter(self , path_to_prepositions):
