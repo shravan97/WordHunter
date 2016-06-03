@@ -46,6 +46,7 @@ ___
 - [ ] Add pictures and gifs of a sample execution  
 - [ ] Better word suggester (Both interms of filtering and its frequency)  
 - [ ] Search term used for image search needs to be automatically found  
+- [ ] Implement multiprocessing in parts which are slower to run  
 
 ___  
 
