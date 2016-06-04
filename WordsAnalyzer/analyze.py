@@ -1,5 +1,5 @@
 from nltk.stem.porter import PorterStemmer as ps
-import re , csv , os
+import re , csv , os , inspect
 
 class WordAnalyze:
 	def __init__(self , words_list):
@@ -34,11 +34,12 @@ class WordAnalyze:
 
 	# !!--- Don't forget that words like 'very' , 'angrily' ..., are stemmed to 'veri','angrili' ---!!
 
-	def words_filter(self , path_to_prepositions):
+	def words_filter(self):
 		#filter prepositions first
-		file = open(path_to_prepositions+'prepositions.csv' , 'r+')
-	 	#prepositions in file scrapped from https://www.englishclub.com/grammar/prepositions-list.htm
-		rows = csv.reader(file)
+		filename = inspect.getframeinfo(inspect.currentframe()).filename
+		path_to_prepositions = os.path.dirname(os.path.abspath(filename))
+		file = open(path_to_prepositions+'/prepositions.csv' , 'r+')
+	 	rows = csv.reader(file)
 		prepositions=[row[0] for row in rows]
 	 	
 	 	print "Filtering out words ........."

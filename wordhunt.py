@@ -16,8 +16,7 @@ words = gs.get_words_from_urls(urls)
 
 #Perform various operations and filter out the words found using search engine
 wa = WordAnalyze(words)
-path_to_prepositions = raw_input("Please enter the absolute path to 'prepositions.csv' in your system \n (for example., '/home/<user>/WordHunter/'): ")
-words = wa.words_filter(path_to_prepositions)
+words = wa.words_filter()
 
 #Frequency of words found using search engine
 freq_words = wa.frequency()
