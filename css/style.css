@@ -1,0 +1,37 @@
+#description
+{
+	float: none;
+	margin: 0 auto;
+	padding: 1%;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	font-family: 'Jura';
+	font-size: 19px; 
+}
+
+#description > a
+{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#description > a:hover
+{
+	color: #0597AA;
+}
+
+html
+{
+	height: 100%;
+}
+
+body
+{
+	background: -webkit-linear-gradient(white,#CCCCCC);
+    background: -moz-linear-gradient(white,#CCCCCC);
+    background: -o-linear-gradient(white,#CCCCCC);
+    background: -ms-linear-gradient(white,#CCCCCC);
+    background: linear-gradient(white,#CCCCCC);
+    background-repeat: no-repeat;
+}
