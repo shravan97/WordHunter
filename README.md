@@ -48,6 +48,7 @@ ___
 - [ ] Search term used for image search needs to be automatically found  
 - [ ] Implement multiprocessing in parts which are slower to run  
 - [ ] Program will have to terminate smoothly on keyboard interrupts and other hindrances  
+- [ ] Instead on taking a topic everytime as input , try taking in as a bunch initially and print questions with a random topic of interest  
 
 ___  
 
