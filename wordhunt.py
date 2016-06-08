@@ -1,4 +1,4 @@
-from SearchEngine import GoogleSearch
+from Web import web
 from ImageSearch import GoogleImageSearch
 from WordsAnalyzer import WordAnalyze
 
@@ -11,9 +11,9 @@ def process():
 	topic = raw_input("Please enter your topic of interest : ")
 	
 	#Google search using google-api-client
-	gs = GoogleSearch(my_api_key , my_cse_id)
-	urls = gs.get_results(topic)
-	words = gs.get_words_from_urls(urls)
+	w = web()
+	urls = w.get_results(my_api_key, my_cse_id , topic)
+	words = w.get_words_from_urls(urls)
 	
 	#Perform various operations and filter out the words found using search engine
 	wa = WordAnalyze(words)
@@ -26,7 +26,8 @@ def process():
 	sorted_freq = sorted(freq_words.items() , key=lambda x:x[1])
 	
 	#Suggested words from the sorted frequency distribution 
-	suggested_words = sorted_freq[(len(sorted_freq)/2) : (len(sorted_freq)/2 + len(sorted_freq)/6)]
+	#suggested_words = sorted_freq[(len(sorted_freq)/2) : (len(sorted_freq)/2 + len(sorted_freq)/6)]
+	suggested_words = sorted_freq[:]
 	#The code for suggestion of words needs improvement since its currently just an approximation
 	
 	print "Here are the suggested words : "
