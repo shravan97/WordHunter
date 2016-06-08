@@ -16,6 +16,8 @@ ___
 * [Google custom search API](https://developers.google.com/custom-search/ "Search API") (For both images and words)  
 
 > Please note that , using the **google custom search API** , you can make only 100 calls per day   
+> and currently , 8 calls are made per execution  
+
 
 * [google-api-python-client](https://pypi.python.org/pypi/google-api-python-client/)  
 * [Beautiful Soup 4](https://pypi.python.org/pypi/beautifulsoup4 "Beautiful Soup")  
