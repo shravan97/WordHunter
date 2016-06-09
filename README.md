@@ -57,7 +57,8 @@ ___
 
 
 ## Contributing  
-Got any cool idea that could be implemented here ? Go ahead and give a pull request . Or You may as well put it up as an issue [here](https://github.com/shravan97/WordHunter/issues "Issues")  
+Got any cool idea that could be implemented here ? Go ahead and give a pull request . Or You may as well put it up as an issue [here](https://github.com/shravan97/WordHunter/issues "Issues") . Please read [this](https://github.com/shravan97/WordHunter/blob/master/CONTRIBUTING.md) document here for more details about contributing  
+
 
 [Please don't forget update the contributors' list below when you're giving a pull request :smile: ]
 ___  
