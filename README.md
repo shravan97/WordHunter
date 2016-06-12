@@ -6,6 +6,11 @@
 ***Word-Hunter***  is a question suggester for [Online Treasure Hunt](https://en.wikipedia.org/wiki/Online_treasure_hunts "Online Treasure Hunt") games (i.e .. this automatically prepares clues using online searches extensively) . All you'll have to do is to give it a **Topic of Interest** , and it'll search for different words relating to the topic and automatically set a question based on the frequency of words and other factors .  
 ___  
 
+## Demonstration
+
+[![asciicast](https://asciinema.org/a/eitugvhnhrbf6xzny20c92wdq.png)](https://asciinema.org/a/eitugvhnhrbf6xzny20c92wdq)  
+
+
 ## Specifications  
 * OS : All Linux distributions  
 * Core language : python 2.7.x   
